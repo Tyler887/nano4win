@@ -1,7 +1,7 @@
 # Nano For Windows
 This program is a "port" of the nano editor to Windows. It is based on MSYS2.
 ## Install
-### Windows PowerShell or PowerShell Core
+Windows PowerShell or PowerShell Core:
 ```powershell
 # Compile nano executable. You may need to run: python -m pip install pyinstaller
 pyinstaller --noconfirm --onefile --console --name "nano" "C:/Users/<USER ID HERE>/<YOUR NANO SUBDIRECTORY HERE>/nano-msys2.py"
@@ -11,7 +11,7 @@ winget install msys2
 # Set up MSYS2 then launch nano.
 nano
 ```
-### Windows Batch
+Windows Batch:
 ```batch
 : Compile nano executable. You may need to run: python -m pip install pyinstaller
 pyinstaller --noconfirm --onefile --console --name "nano" "C:/Users/<USER ID HERE>/<YOUR NANO SUBDIRECTORY HERE>/nano-msys2.py"
@@ -21,6 +21,10 @@ winget install msys2
 : Set up MSYS2 then launch nano.
 nano
 ```
+
+Now the following should appear (red indicates content that may be different depending on the arguments passed to `pyinstaller`):
+<a name="img1"></a>
+[![Nano is running](running.png)](#img1)
 ## Errors
 ### `'msys2' is not recognized as an internal or external command, operable program or batch file.`
 This is because MSYS2 was not installed (you forgot to install it). Use WinGet to install
